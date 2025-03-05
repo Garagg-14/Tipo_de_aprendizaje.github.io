@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: ¿Cuál es tu tipo de aprendizaje?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Fondo azul clarito */
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .question {
+            background-color: #ffffff;
+            border: 1px solid #00796b;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        .question label {
+            display: block;
+            margin: 8px 0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #00796b;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 1.3em;
+            margin-top: 20px;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Test: ¿Cuál es tu tipo de aprendizaje?</h1>
+
+<p><strong>Instrucciones:</strong><br> Responde cada pregunta seleccionando la opción que más se ajuste a ti.</p>
+
+<form id="quizForm">
+    <div class="question">
+        <p>1. Cuando intento recordar algo, suelo:</p>
+        <input type="radio" name="q1" value="A"> A) Visualizar imágenes o diagramas en mi mente.<br>
+        <input type="radio" name="q1" value="B"> B) Recordar lo que alguien dijo sobre el tema.<br>
+        <input type="radio" name="q1" value="C"> C) Recordar cómo lo hice o lo experimenté.<br>
+        <input type="radio" name="q1" value="D"> D) Relacionarlo con algo que ya sabía.<br>
+        <input type="radio" name="q1" value="E"> E) Recordar lo que discutí con otras personas.<br>
+    </div>
+    
+    <div class="question">
+        <p>2. En clase, aprendo mejor cuando:</p>
+        <input type="radio" name="q2" value="A"> A) El profesor usa presentaciones visuales como diagramas o mapas conceptuales.<br>
+        <input type="radio" name="q2" value="B"> B) Escucho explicaciones claras y detalladas.<br>
+        <input type="radio" name="q2" value="C"> C) Hago actividades prácticas o experimentos.<br>
+        <input type="radio" name="q2" value="D"> D) Relaciono el tema con conocimientos previos.<br>
+        <input type="radio" name="q2" value="E"> E) Trabajo en equipo para resolver problemas.<br>
+    </div>
+    
+    <div class="question">
+        <p>3. Si tengo que aprender algo nuevo, prefiero:</p>
+        <input type="radio" name="q3" value="A"> A) Ver un esquema o diagrama explicativo.<br>
+        <input type="radio" name="q3" value="B"> B) Escuchar una explicación verbal paso a paso.<br>
+        <input type="radio" name="q3" value="C"> C) Probarlo directamente y aprender de mis errores.<br>
+        <input type="radio" name="q3" value="D"> D) Relacionarlo con experiencias personales previas.<br>
+        <input type="radio" name="q3" value="E"> E) Aprenderlo en grupo compartiendo ideas.<br>
+    </div>
+    
+    <div class="question">
+        <p>4. Cuando leo un libro o estudio un tema nuevo:</p>
+        <input type="radio" name="q4" value="A"> A) Prefiero ver imágenes, gráficos o ilustraciones que complementen el texto.<br>
+        <input type="radio" name="q4" value="B"> B) Leer en voz alta o escuchar un audiolibro.<br>
+        <input type="radio" name="q4" value="C"> C) Subrayar y tomar notas mientras leo.<br>
+        <input type="radio" name="q4" value="D"> D) Reflexionar sobre cómo se conecta con lo que ya sé.<br>
+        <input type="radio" name="q4" value="E"> E) Discutirlo con alguien más.<br>
+    </div>
+    
+    <div class="question">
+        <p>5. Para estudiar antes de un examen suelo:</p>
+        <input type="radio" name="q5" value="A"> A) Hacer esquemas, resúmenes visuales o mapas mentales.<br>
+        <input type="radio" name="q5" value="B"> B) Escuchar grabaciones o debatir el tema con alguien más.<br>
+        <input type="radio" name="q5" value="C"> C) Resolver ejercicios prácticos o realizar simulaciones.<br>
+        <input type="radio" name="q5" value="D"> D) Relacionar el contenido con ejemplos reales o experiencias personales.<br>
+        <input type="radio" name="q5" value="E"> E) Estudiar en grupo para compartir ideas y resolver dudas juntos.<br>
+    </div>
+    
+    <div class="question">
+        <p>6. En una conversación importante suelo recordar:</p>
+        <input type="radio" name="q6" value="A"> A) Las expresiones faciales y gestos de la persona.<br>
+        <input type="radio" name="q6" value="B"> B) Las palabras exactas que se dijeron.<br>
+        <input type="radio" name="q6" value="C"> C) Lo que estaba haciendo mientras hablaba con la persona.<br>
+        <input type="radio" name="q6" value="D"> D) Cómo lo relacioné con algo importante para mí.<br>
+        <input type="radio" name="q6" value="E"> E) Lo que discutimos colectivamente.<br>
+    </div>
+    
+    <div class="question">
+        <p>7. Si tengo que dar direcciones a alguien, prefiero:</p>
+        <input type="radio" name="q7" value="A"> A) Dibujar un mapa para explicar el camino.<br>
+        <input type="radio" name="q7" value="B"> B) Explicar verbalmente cómo llegar.<br>
+        <input type="radio" name="q7" value="C"> C) Mostrar físicamente el camino o señalar puntos clave.<br>
+        <input type="radio" name="q7" value="D"> D) Usar referencias conocidas por la otra persona para facilitarlo.<br>
+        <input type="radio" name="q7" value="E"> E) Pedir ayuda a alguien más para explicarlo mejor.<br>
+    </div>
+    
+    <div class="question">
+        <p>8. Cuando veo una película interesante suelo recordar:</p>
+        <input type="radio" name="q8" value="A"> A) Las escenas y los detalles visuales más llamativos.<br>
+        <input type="radio" name="q8" value="B"> B) Los diálogos y frases clave de los personajes.<br>
+        <input type="radio" name="q8" value="C"> C) Cómo me hizo sentir o lo que hice después de verla.<br>
+        <input type="radio" name="q8" value="D"> D) El mensaje principal y cómo se conecta con mi vida personal.<br>
+        <input type="radio" name="q8" value="E"> E) Lo que comenté sobre ella con otras personas.<br>
+    </div>
+    
+    <div class="question">
+        <p>9. Para aprender una receta nueva prefiero:</p>
+        <input type="radio" name="q9" value="A"> A) Ver fotos del plato terminado y pasos visuales claros.<br>
+        <input type="radio" name="q9" value="B"> B) Escuchar a alguien explicándome cómo hacerlo paso a paso.<br>
+        <input type="radio" name="q9" value="C"> C) Prepararla directamente mientras sigo instrucciones básicas.<br>
+        <input type="radio" name="q9" value="D"> D) Relacionarla con recetas similares que ya conozco.<br>
+        <input type="radio" name="q9" value="E"> E) Cocinarla junto a alguien más para compartir ideas.<br>
+    </div>
+    
+    <div class="question">
+        <p>10. Si tengo que recordar un número de teléfono:</p>
+        <input type="radio" name="q10" value="A"> A) Lo escribo y recuerdo cómo se ve en papel.<br>
+        <input type="radio" name="q10" value="B"> B) Lo repito en voz alta varias veces hasta memorizarlo.<br>
+        <input type="radio" name="q10" value="C"> C) Lo marco directamente en el teclado varias veces para recordarlo.<br>
+        <input type="radio" name="q10" value="D"> D) Lo asocio con algo significativo (como una fecha importante).<br>
+        <input type="radio" name="q10" value="E"> E) Pido ayuda a alguien para recordarlo juntos.<br>
+    </div>
+    
+    <div class="question">
+        <p>11. En reuniones largas prefiero:</p>
+        <input type="radio" name="q11" value="A"> A) Tener presentaciones visuales como apoyo (diapositivas, gráficos).<br>
+        <input type="radio" name="q11" value="B"> B) Escuchar al expositor sin interrupciones ni distracciones visuales innecesarias.<br>
+        <input type="radio" name="q11" value="C"> C) Tomar notas activamente o moverme para mantenerme concentrado/a.<br>
+        <input type="radio" name="q11" value="D"> D) Reflexionar sobre cómo aplicar lo aprendido a mi vida personal o profesional.<br>
+        <input type="radio" name="q11" value="E"> E) Participar activamente haciendo preguntas al grupo.<br>
+    </div>
+    
+    <div class="question">
+        <p>12. Si quiero aprender sobre historia prefiero:</p>
+        <input type="radio" name="q12" value="A"> A) Ver documentales con gráficos e imágenes históricas llamativas.<br>
+        <input type="radio" name="q12" value="B"> B) Escuchar audiolibros narrados sobre eventos históricos importantes.<br>
+        <input type="radio" name="q12" value="C"> C) Visitar museos o participar en actividades relacionadas con la época histórica.<br>
+        <input type="radio" name="q12" value="D"> D) Relacionar los eventos históricos con sucesos actuales o personales.<br>
+        <input type="radio" name="q12" value="E"> E) Discutirlo en grupo para entender diferentes perspectivas.<br>
+    </div>
+    
+    <div class="question">
+        <p>13. Cuando aprendo nuevas palabras en otro idioma prefiero:</p>
+        <input type="radio" name="q13" value="A"> A) Escribirlas y asociarlas con imágenes para recordarlas mejor.<br>
+        <input type="radio" name="q13" value="B"> B) Escucharlas repetidamente hasta memorizarlas correctamente.<br>
+        <input type="radio" name="q13" value="C"> C) Usarlas en frases reales durante conversaciones prácticas.<br>
+        <input type="radio" name="q13" value="D"> D) Conectarlas con palabras similares en mi idioma nativo u otros idiomas conocidos.<br>
+        <input type="radio" name="q13" value="E"> E) Practicarlas hablando con otras personas.<br>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Obtener resultado</button>
+</form>
+
+<div class="result" id="result"></div>
+
+<script>
+    function calculateResult() {
+        var score = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+
+        // Recorre todas las preguntas del formulario y cuenta las respuestas seleccionadas
+        var formElements = document.getElementById('quizForm').elements;
+        for (var i = 0; i < formElements.length; i++) {
+            if (formElements[i].type === "radio" && formElements[i].checked) {
+                score[formElements[i].value]++;
+            }
+        }
+
+        // Determina el tipo de aprendizaje basado en la opción con más respuestas
+        var maxScore = Math.max(score.A, score.B, score.C, score.D, score.E);
+        var result = '';
+        if (score.A === maxScore) result = 'Tu tipo de aprendizaje es: Visual (A).';
+        else if (score.B === maxScore) result = 'Tu tipo de aprendizaje es: Auditivo (B).';
+        else if (score.C === maxScore) result = 'Tu tipo de aprendizaje es: Kinestésico (C).';
+        else if (score.D === maxScore) result = 'Tu tipo de aprendizaje es: Significativo (D).';
+        else if (score.E === maxScore) result = 'Tu tipo de aprendizaje es: Cooperativo (E).';
+
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
